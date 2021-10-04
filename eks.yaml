@@ -3,10 +3,10 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eksworkshop-eksctl
-  #region: ${AWS_REGION}
-  region: us-west-2
-  version: "1.21"
+  name.   : eksworkshop-eksctl
+  #region : ${AWS_REGION}
+  region. : us-west-2
+  version : "1.21"
 
 vpc:
   subnets:
@@ -25,16 +25,16 @@ nodeGroups:
   - name: general
     instanceType     : t3.small
     volumeSize       : 30
-    minSize: 2
-    maxSize: 4
+    minSize.         : 2
+    maxSize.         : 4
     desiredCapacity  : 2
     instanceName     : general
-    labels          : { role: general }
+    labels           : { role: general }
     privateNetworking: true
     # https://github.com/weaveworks/eksctl/blob/main/examples/
     ssh: # import public key from file
-      # publicKeyPath: ~/.ssh/id_rsa_tests.pub # for Linux
-      publicKeyPath: D:\keys\key.pub
+      # publicKeyPath : ~/.ssh/id_rsa_tests.pub # for Linux
+      publicKeyPath.  : D:\keys\key.pub
 
     iam:
       withAddonPolicies:
@@ -66,8 +66,8 @@ nodeGroups:
     privateNetworking: true
     # https://github.com/weaveworks/eksctl/blob/main/examples/
     ssh: # import public key from file
-      # publicKeyPath: ~/.ssh/id_rsa_tests.pub # for Linux
-      publicKeyPath: D:\keys\key.pub
+      # publicKeyPath : ~/.ssh/id_rsa_tests.pub # for Linux
+      publicKeyPath.  : D:\keys\key.pub
   
     iam:
       withAddonPolicies:
@@ -88,7 +88,7 @@ nodeGroups:
 # To enable all of the control plane logs, uncomment below:
 cloudWatch:
   clusterLogging:
-    enableTypes: ["*"]
+    enableTypes : ["*"]
 
   #secretsEncryption:
     #keyARN: ${MASTER_ARN}
