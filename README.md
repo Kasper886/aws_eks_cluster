@@ -1,4 +1,4 @@
-# aws_eks_cluster
+# AWS EKS cluster creation
 ---
 Usage
 ---
